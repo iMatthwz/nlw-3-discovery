@@ -11,7 +11,12 @@
 
 body {
     height: 100vh;
-
+    
     color: white;
+    
+    background-color: #ebf2f5;
+}
+
+body, button, input, textarea {
     font: 400 1.8rem/1 "Nunito", sans-serif;
 }

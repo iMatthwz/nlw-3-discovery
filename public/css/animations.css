@@ -1,3 +1,8 @@
+
+.animate-up {
+    animation: up .3s backwards;
+}
+
 @keyframes up {
     from {
         opacity: 0;
@@ -10,6 +15,28 @@
     }
 }
 
-.animate-up {
-    animation: up .3s backwards;
+.animate-right {
+    animation: right .3s;
+}
+
+@keyframes right {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-appear {
+    animation: appear .3s backwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

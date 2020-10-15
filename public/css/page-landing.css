@@ -9,18 +9,32 @@
 }
 
 #container {
-    width: 90%;
+    width: min(90%, 112rem);
     margin: auto;
 }
 
-.location {
-    margin-top: 8px;
+#logo {
+    animation-delay: 50ms;
 }
 
 .location,
 h1,
 .visit p {
     height: 16vh;
+}
+
+.location {
+    margin-top: 8px;
+    
+    animation-delay: 100ms;
+}
+
+main h1 {
+    animation-delay: 150ms;
+}
+
+.visit p {
+    animation-delay: 200ms;
 }
 
 .visit a {
@@ -39,30 +53,65 @@ h1,
     margin: 0 auto;
 
     transition: background-color .2s;
+
+    animation-delay: 250ms;
 }
 
 .visit a:hover {
     background-color: #96feff;
 }
 
-/* ANIMATION */
 
-#logo {
-    animation-delay: 50ms;
-}
+/* DESKTOP VERSION */
 
-.location {
-    animation-delay: 100ms;
-}
+@media (min-width: 768px) {
+    #container {
+        background: url(../img/bg.svg) no-repeat 80% / clamp(30rem, 54vw, 56rem);
 
-main h1 {
-    animation-delay: 150ms;
-}
+        padding: 5rem 2rem;
+    }
 
-.visit p {
-    animation-delay: 200ms;
-}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.visit a {
-    animation-delay: 250ms
+    .location, h1, .visit p {
+        height: initial;
+        text-align: initial;
+    }
+    
+    main h1 {
+        font-size: clamp(4rem, 8vw, 8.4rem);
+        font-weight: 800;
+        text-align: .88;
+
+        width: min(300px, 80%);
+        margin: clamp(10%, 9vh, 12%) 0 4rem;
+    }
+
+    .location {
+        margin: 0;
+
+        text-align: right;
+        font-size: 2.4rem;
+    }
+
+    .visit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .visit p {
+        line-height: 1.2;
+        font-size: 2.4rem;
+
+        width: clamp(20rem, 20vw, 30rem)
+    }
+
+    .visit a {
+        margin: 0;
+    }
 }
