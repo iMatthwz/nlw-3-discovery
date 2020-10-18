@@ -1,0 +1,25 @@
+{
+  "name": "nlw-3",
+  "version": "1.0.0",
+  "description": "Happy é uma plataforma criada para facilitar a visita aos orfanatos próximos a você!",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iMatthwz/nlw-3-discovery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iMatthwz/nlw-3-discovery/issues"
+  },
+  "homepage": "https://github.com/iMatthwz/nlw-3-discovery#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.5"
+  }
+}

@@ -7,23 +7,38 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 //CREATE ICON
 
 const icon = L.icon({
-    iconUrl: "./public/img/map-marker.svg",
+    iconUrl: "/img/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68],
     popupAnchor: [170, 2]
 });
 
-//CREATE POPUP
+const spans = document.querySelectorAll(".orphanages span");
 
-const popup = L.popup({
-    closeButton: false,
-    className: "map-popup",
-    minWidth: 240,
-    minHeight: 240
-}).setContent('Lar das meninas<a href="orphanage.html?id=1" class="choose-orphanage"><img src="./public/img/arrow-white.svg"></a>')
+spans.forEach(span => {
+    const orphanage = {
+        id: span.dataset.id,
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng
+    }
+    
+    addOrphanage(orphanage);
+});
 
-//ADD MAP AND POPUP
-
-L.marker([-23.689235, -46.555756], { icon })
+function addOrphanage({id, name, lat, lng}) {
+    //CREATE POPUP
+    
+    const popup = L.popup({
+        closeButton: false,
+        className: "map-popup",
+        minWidth: 240,
+        minHeight: 240
+    }).setContent(`${name}<a href="/orphanage?id=${id}" class="choose-orphanage"><img src="/img/arrow-white.svg"></a>`)
+    
+    //ADD MAP AND POPUP
+    
+    L.marker([lat, lng], { icon })
     .addTo(map)
     .bindPopup(popup);
+}
