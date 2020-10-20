@@ -13,7 +13,7 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto:
 - [Node.js](https://nodejs.org/pt-br/)
 - [Express](https://expressjs.com/pt-br/)
 - [SQLite](https://www.sqlite.org/index.html)
-- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Handlebars](https://handlebarsjs.com/)
 
 ## :computer: Layout
 
