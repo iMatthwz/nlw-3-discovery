@@ -1,6 +1,6 @@
 //CREATE MAP
 
-var map = L.map('mapid').setView([-23.689235, -46.555756], 15);
+var map = L.map('mapid').setView([-23.71899, -46.5428036], 11);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 

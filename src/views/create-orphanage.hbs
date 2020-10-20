@@ -31,7 +31,7 @@
                 </footer>
             </aside>
             <main class="with-sidebar animate-appear">
-                <form action="">
+                <form action="/save-orphanage" method="post">
                     <fieldset>
                         <legend>Dados</legend>
                         <div class="map-container">
@@ -58,7 +58,7 @@
                             <label for="images">Fotos</label>
                             <div class="images-upload" id="images">
                                 <div class="new-upload">
-                                    <input name="images" placeholder="Cole o link da foto aqui" required>
+                                    <input type="url" name="images" placeholder="Cole o link da foto aqui" required>
                                     <span onclick="deletePhotoField(event)">
                                         <img src="/img/red-x.svg" alt="Remover imagem">
                                     </span>

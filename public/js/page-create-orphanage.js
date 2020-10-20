@@ -1,6 +1,6 @@
 //CREATE MAP
 
-var map = L.map('mapid').setView([-23.689235, -46.555756], 16);
+var map = L.map('mapid').setView([-23.71899, -46.5428036], 14);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
@@ -76,4 +76,16 @@ function toggleButton(event) {
     const yesOrNo = weekendInput.value == "1" ? "yes" : "no";
 
     clickedButton.classList.add(`${yesOrNo}`);
+}
+
+document.querySelector("main form").addEventListener("submit", confirm);
+
+function confirm(event) {
+    const lat = document.querySelector(".map-container input[name=lat]");
+    const lng = document.querySelector(".map-container input[name=lng]");
+
+    if (lat.value == "" || lng.value == "") {
+        event.preventDefault();
+        return alert("Não esqueça de selecionar a localização no mapa.")
+    }
 }
